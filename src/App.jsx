@@ -16,7 +16,7 @@ const MusicianPortfolio = () => {
 
   // Sample data - Replace with your actual information
   const profileData = {
-    name: "Your Name",
+    name: "SAGAR",
     tagline: "Professional Musician & Performer",
     bio: "Passionate musician with years of experience performing at various events and music bands. Specializing in [Your Instrument/Genre] with a deep love for creating memorable musical experiences.",
     email: "yourname@email.com",

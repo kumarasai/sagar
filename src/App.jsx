@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
 import { Music, Award, GraduationCap, Briefcase, Users, Camera } from 'lucide-react';
-import profile from "./images/profile.jpg"
 
 export default function MusicianPortfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [visibleImages, setVisibleImages] = useState(8);
+  
+  // Replace this array with your actual image URLs
+  const images = Array(24).fill(null).map((_, i) => ({
+    id: i + 1,
+    url: `YOUR_IMAGE_URL_${i + 1}`, // Replace with actual image URLs
+    alt: `Photo ${i + 1}`
+  }));
+  
+  const totalImages = images.length;
+  const hasMore = visibleImages < totalImages;
+  const canShowLess = visibleImages > 8;
+  
+  const loadMore = () => {
+    setVisibleImages(prev => Math.min(prev + 8, totalImages));
+  };
+  
+  const showLess = () => {
+    setVisibleImages(8);
+  };
 
   const sections = [
     { id: 'about', label: 'About', icon: Users },
@@ -45,7 +64,7 @@ export default function MusicianPortfolio() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-red-500 rounded-full overflow-hidden border-4 border-white shadow-lg">
             <img 
-              src={profile} 
+              src="YOUR_IMAGE_URL_HERE" 
               alt="B. Venkata Vidya Sagar" 
               className="w-full h-full object-cover"
             />
@@ -158,17 +177,53 @@ export default function MusicianPortfolio() {
             Photo Gallery
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+            {images.slice(0, visibleImages).map((image) => (
               <div
-                key={i}
-                className="aspect-square bg-gradient-to-br from-orange-200 to-red-200 rounded-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => setSelectedImage(i)}
+                key={image.id}
+                className="aspect-square bg-gradient-to-br from-orange-200 to-red-200 rounded-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform overflow-hidden"
+                onClick={() => setSelectedImage(image)}
               >
-                <Camera size={32} className="text-orange-700" />
+                {/* Replace the Camera icon with actual image */}
+                <img 
+                  src={image.url} 
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to icon if image fails to load
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="hidden w-full h-full items-center justify-center">
+                  <Camera size={32} className="text-orange-700" />
+                </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-500 mt-6 text-sm">Click on any placeholder to view. Add your photos by replacing these placeholders.</p>
+          
+          {/* Load More / See Less Buttons */}
+          <div className="flex justify-center gap-4 mt-6">
+            {hasMore && (
+              <button
+                onClick={loadMore}
+                className="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold"
+              >
+                Load More
+              </button>
+            )}
+            {canShowLess && (
+              <button
+                onClick={showLess}
+                className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
+              >
+                See Less
+              </button>
+            )}
+          </div>
+          
+          <p className="text-center text-gray-500 mt-6 text-sm">
+            Showing {visibleImages} of {totalImages} photos
+          </p>
         </section>
 
         {/* Current Position */}
@@ -197,10 +252,27 @@ export default function MusicianPortfolio() {
           onClick={() => setSelectedImage(null)}
         >
           <div className="bg-white rounded-lg p-4 max-w-3xl w-full">
-            <div className="aspect-video bg-gradient-to-br from-orange-200 to-red-200 rounded-lg flex items-center justify-center">
-              <Camera size={64} className="text-orange-700" />
+            <div className="aspect-video bg-gradient-to-br from-orange-200 to-red-200 rounded-lg overflow-hidden flex items-center justify-center">
+              <img 
+                src={selectedImage.url} 
+                alt={selectedImage.alt}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="hidden w-full h-full items-center justify-center">
+                <Camera size={64} className="text-orange-700" />
+              </div>
             </div>
-            <p className="text-center text-gray-600 mt-4">Photo {selectedImage} - Replace with actual image</p>
+            <p className="text-center text-gray-600 mt-4">{selectedImage.alt}</p>
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="mt-4 w-full py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
+            >
+              Close
+            </button>
           </div>
         </div>
       )}

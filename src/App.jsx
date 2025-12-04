@@ -42,8 +42,12 @@ export default function MusicianPortfolio() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
-            <Music size={64} className="text-white" />
+          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-red-500 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img 
+              src="YOUR_IMAGE_URL_HERE" 
+              alt="B. Venkata Vidya Sagar" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">B. Venkata Vidya Sagar</h2>
           <p className="text-xl sm:text-2xl text-orange-700 mb-2">Music Instructor</p>

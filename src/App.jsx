@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Music, Award, GraduationCap, Briefcase, Users, Camera } from 'lucide-react';
+import header from "./images/header.jpg"
 
 export default function MusicianPortfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -64,7 +65,7 @@ export default function MusicianPortfolio() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-red-500 rounded-full overflow-hidden border-4 border-white shadow-lg">
             <img 
-              src="YOUR_IMAGE_URL_HERE" 
+              src={header}
               alt="B. Venkata Vidya Sagar" 
               className="w-full h-full object-cover"
             />

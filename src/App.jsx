@@ -15,30 +15,30 @@ export default function MusicianPortfolio() {
   // }));
 
   const images = [
-    { id: 1, url: 'images/guest1.jpg', alt: 'Performance Photo 1' },
-    { id: 2, url: 'images/guest2.jpg', alt: 'Performance Photo 2' },
-    { id: 3, url: 'images/guest3.jpg', alt: 'Performance Photo 3' },
-    { id: 4, url: 'images/guest4.jpg', alt: 'Performance Photo 4' },
-    { id: 5, url: 'images/guest5.jpg', alt: 'Performance Photo 5' },
-    { id: 6, url: 'images/guest6.jpg', alt: 'Performance Photo 6' },
-    { id: 7, url: 'images/guest7.jpg', alt: 'Performance Photo 7' },
-    { id: 8, url: 'images/guest8.jpg', alt: 'Performance Photo 8' },
-    { id: 9, url: 'images/guest9.jpg', alt: 'Performance Photo 9' },
-    { id: 10, url: 'images/guest10.jpg', alt: 'Performance Photo 10' },
-    { id: 11, url: 'images/guest11.jpg', alt: 'Performance Photo 11' },
-    { id: 12, url: 'images/guest12.jpg', alt: 'Performance Photo 12' },
-    { id: 13, url: 'images/guest13.jpg', alt: 'Performance Photo 13' },
-    { id: 14, url: 'images/guest14.jpg', alt: 'Performance Photo 14' },
-    { id: 15, url: 'images/guest15.jpg', alt: 'Performance Photo 15' },
-    { id: 16, url: 'images/guest16.jpg', alt: 'Performance Photo 16' },
-    { id: 17, url: 'images/guest17.jpg', alt: 'Performance Photo 17' },
-    { id: 18, url: 'images/guest18.jpg', alt: 'Performance Photo 18' },
-    { id: 19, url: 'images/guest19.jpg', alt: 'Performance Photo 19' },
-    { id: 20, url: 'images/guest20.jpg', alt: 'Performance Photo 20' },
-    { id: 21, url: 'images/guest21.jpg', alt: 'Performance Photo 21' },
-    { id: 22, url: 'images/guest22.jpg', alt: 'Performance Photo 22' },
-    { id: 23, url: 'images/guest23.jpg', alt: 'Performance Photo 23' },
-    { id: 24, url: 'images/guest24.jpg', alt: 'Performance Photo 24' }
+    { id: 1, url: 'images/guest1.jpg', alt: '' },
+    { id: 2, url: 'images/guest2.jpg', alt: '' },
+    { id: 3, url: 'images/guest3.jpg', alt: '' },
+    { id: 4, url: 'images/guest4.jpg', alt: '' },
+    { id: 5, url: 'images/guest5.jpg', alt: '' },
+    { id: 6, url: 'images/guest6.jpg', alt: '' },
+    { id: 7, url: 'images/guest7.jpg', alt: '' },
+    { id: 8, url: 'images/guest8.jpg', alt: '' },
+    { id: 9, url: 'images/guest9.jpg', alt: '' },
+    { id: 10, url: 'images/guest10.jpg', alt: '' },
+    { id: 11, url: 'images/guest11.jpg', alt: '' },
+    { id: 12, url: 'images/guest12.jpg', alt: '' },
+    { id: 13, url: 'images/guest13.jpg', alt: '' },
+    { id: 14, url: 'images/guest14.jpg', alt: '' },
+    { id: 15, url: 'images/guest15.jpg', alt: '' },
+    { id: 16, url: 'images/guest16.jpg', alt: '' },
+    { id: 17, url: 'images/guest17.jpg', alt: '' },
+    { id: 18, url: 'images/guest18.jpg', alt: '' },
+    { id: 19, url: 'images/guest19.jpg', alt: '' },
+    { id: 20, url: 'images/guest20.jpg', alt: '' },
+    { id: 21, url: 'images/guest21.jpg', alt: '' },
+    { id: 22, url: 'images/guest22.jpg', alt: '' },
+    { id: 23, url: 'images/guest23.jpg', alt: '' },
+    { id: 24, url: 'images/guest24.jpg', alt: '' }
   ];
   
   const totalImages = images.length;
@@ -262,7 +262,8 @@ export default function MusicianPortfolio() {
             <Briefcase size={32} />
             <h3 className="text-2xl sm:text-3xl font-bold">Current Position</h3>
           </div>
-          <p className="text-lg sm:text-xl">Music Instructor at IIIT (Triple IT) Nuzvid</p>
+          <p className="text-lg sm:text-xl">Guest Trainer in vocal 
+          at IIIT (Triple IT) Nuzvid</p>
         </section>
       </div>
 
@@ -270,7 +271,8 @@ export default function MusicianPortfolio() {
       <footer className="bg-gray-800 text-white py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-lg font-semibold mb-2">B. Venkata Vidya Sagar</p>
-          <p className="text-gray-400">Music Instructor | IIIT Nuzvid</p>
+          <p className="text-gray-400">Guest Trainer in vocal 
+          | IIIT Nuzvid</p>
           <p className="text-sm text-gray-500 mt-4">© 2025 All Rights Reserved</p>
         </div>
       </footer>

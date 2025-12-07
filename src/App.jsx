@@ -1,17 +1,45 @@
 import React, { useState } from 'react';
 import { Music, Award, GraduationCap, Briefcase, Users, Camera } from 'lucide-react';
-import header from "./images/header.jpg"
+import header from "./images/pic.jpg"
+
 
 export default function MusicianPortfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [visibleImages, setVisibleImages] = useState(8);
   
   // Replace this array with your actual image URLs
-  const images = Array(24).fill(null).map((_, i) => ({
-    id: i + 1,
-    url: `YOUR_IMAGE_URL_${i + 1}`, // Replace with actual image URLs
-    alt: `Photo ${i + 1}`
-  }));
+  // const images = Array(24).fill(null).map((_, i) => ({
+  //   id: i + 1,
+  //   url: `YOUR_IMAGE_URL_${i + 1}`, // Replace with actual image URLs
+  //   alt: `Photo ${i + 1}`
+  // }));
+
+  const images = [
+    { id: 1, url: 'images/guest1.jpg', alt: 'Performance Photo 1' },
+    { id: 2, url: 'images/guest2.jpg', alt: 'Performance Photo 2' },
+    { id: 3, url: 'images/guest3.jpg', alt: 'Performance Photo 3' },
+    { id: 4, url: 'images/guest4.jpg', alt: 'Performance Photo 4' },
+    { id: 5, url: 'images/guest5.jpg', alt: 'Performance Photo 5' },
+    { id: 6, url: 'images/guest6.jpg', alt: 'Performance Photo 6' },
+    { id: 7, url: 'images/guest7.jpg', alt: 'Performance Photo 7' },
+    { id: 8, url: 'images/guest8.jpg', alt: 'Performance Photo 8' },
+    { id: 9, url: 'images/guest9.jpg', alt: 'Performance Photo 9' },
+    { id: 10, url: 'images/guest10.jpg', alt: 'Performance Photo 10' },
+    { id: 11, url: 'images/guest11.jpg', alt: 'Performance Photo 11' },
+    { id: 12, url: 'images/guest12.jpg', alt: 'Performance Photo 12' },
+    { id: 13, url: 'images/guest13.jpg', alt: 'Performance Photo 13' },
+    { id: 14, url: 'images/guest14.jpg', alt: 'Performance Photo 14' },
+    { id: 15, url: 'images/guest15.jpg', alt: 'Performance Photo 15' },
+    { id: 16, url: 'images/guest16.jpg', alt: 'Performance Photo 16' },
+    { id: 17, url: 'images/guest17.jpg', alt: 'Performance Photo 17' },
+    { id: 18, url: 'images/guest18.jpg', alt: 'Performance Photo 18' },
+    { id: 19, url: 'images/guest19.jpg', alt: 'Performance Photo 19' },
+    { id: 20, url: 'images/guest20.jpg', alt: 'Performance Photo 20' },
+    { id: 21, url: 'images/guest21.jpg', alt: 'Performance Photo 21' },
+    { id: 22, url: 'images/guest22.jpg', alt: 'Performance Photo 22' },
+    { id: 23, url: 'images/guest23.jpg', alt: 'Performance Photo 23' },
+    { id: 24, url: 'images/guest24.jpg', alt: 'Performance Photo 24' }
+  ];
   
   const totalImages = images.length;
   const hasMore = visibleImages < totalImages;
@@ -71,7 +99,8 @@ export default function MusicianPortfolio() {
             />
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">B. Venkata Vidya Sagar</h2>
-          <p className="text-xl sm:text-2xl text-orange-700 mb-2">Music Instructor</p>
+          <p className="text-xl sm:text-2xl text-orange-700 mb-2">Guest Trainer in vocal 
+          </p>
           <p className="text-lg text-gray-600">IIIT (Triple IT) Nuzvid</p>
         </div>
       </section>

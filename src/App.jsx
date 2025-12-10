@@ -115,7 +115,9 @@ export default function MusicianPortfolio() {
           <div className="space-y-4 text-gray-700">
             <div>
               <h4 className="font-semibold text-lg text-gray-800 mb-2">Family Background</h4>
-              <p>Son of Sri Bankupalli Sriramachandra Murthy and Smt. Pentamma</p>
+              <p className="mb-2">Son of Sri Bankupalli Sriramachandra Murthy and Smt. Pentamma</p>
+              <p className="mb-2">He is from traditional music family.</p>
+              <p>Elder brother shri BDS sarma is Mridangam Artist and another brother shri Vasu is a violinist</p>
             </div>
             <div>
               <h4 className="font-semibold text-lg text-gray-800 mb-2">Musical Training</h4>

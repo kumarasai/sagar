@@ -169,7 +169,7 @@ export default function MusicianPortfolio() {
             </div>
             <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg">
               <h4 className="font-semibold text-gray-800 mb-2">ETV Paadutha Teeyaga (2011)</h4>
-              <p className="text-gray-700">Participated up to Water Final round in the presence of Padma Bhushan Dr. S. P. Balasubrahmanyam</p>
+              <p className="text-gray-700">Participated up to quarter Final round in the presence of Padma Bhushan Dr. S. P. Balasubrahmanyam</p>
             </div>
             <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg">
               <h4 className="font-semibold text-gray-800 mb-2">Shivaratri 2025 Celebrations</h4>
